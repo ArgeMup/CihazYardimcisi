@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7100CAF-D5FB-4F66-A5E7-9CE4467D4DB1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cihaz_Yardımcısı</RootNamespace>
+    <AssemblyName>Cihaz Yardımcısı</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>true</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;HazriKod_Cdiyez_Görsel</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;HazriKod_Cdiyez_Görsel</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ikon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnaEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaEkran.Designer.cs">
+      <DependentUpon>AnaEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sınıflar\HazirKod\Ayarlar.cs" />
+    <Compile Include="Sınıflar\HazirKod\Degiskenler.cs" />
+    <Compile Include="Sınıflar\HazirKod\DonanımHaberleşmesi.cs" />
+    <Compile Include="Sınıflar\HazirKod\DonanımHaberleşmesi_KomutSatırıUygulaması.cs" />
+    <Compile Include="Sınıflar\HazirKod\DonanımHaberleşmesi_SeriPort.cs" />
+    <Compile Include="Sınıflar\HazirKod\DonanımHaberleşmesi_Tcp.cs" />
+    <Compile Include="Sınıflar\HazirKod\DonanımHaberleşmesi_Udp.cs" />
+    <Compile Include="Sınıflar\HazirKod\Donusturme.cs" />
+    <Compile Include="Sınıflar\HazirKod\DurumBildirimi.cs" />
+    <Compile Include="Sınıflar\HazirKod\Karmasiklastirma.cs" />
+    <Compile Include="Sınıflar\HazirKod\KayitDefteri.cs" />
+    <Compile Include="Sınıflar\HazirKod\Matematiksel.cs" />
+    <Compile Include="Sınıflar\HazirKod\PencereVeTepsiIkonuKontrolu.cs" />
+    <Compile Include="Sınıflar\HazirKod\UygulamalarArasiHaberlesme.cs" />
+    <Compile Include="Sınıflar\HazirKod\UygulamaOncedenCalistirildiMi.cs" />
+    <Compile Include="Sınıflar\HazirKod\Win32Kutuphaneleri.cs" />
+    <Compile Include="Sınıflar\HazirKod\YeniYazılımKontrolü.cs" />
+    <Compile Include="Sınıflar\İskelet\Bağlantılar.cs" />
+    <Compile Include="Sınıflar\İskelet\Bağlantılar_Uygulama.cs" />
+    <Compile Include="Sınıflar\İskelet\Bağlantılar_Tarama.cs" />
+    <Compile Include="Sınıflar\İskelet\Görseller.cs" />
+    <Compile Include="Sınıflar\İskelet\Ortak.cs" />
+    <Compile Include="Uygulama\Örnek_Şablon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uygulama\Örnek_Şablon.Designer.cs">
+      <DependentUpon>Örnek_Şablon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uygulama\Gönder Al.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uygulama\Gönder Al.Designer.cs">
+      <DependentUpon>Gönder Al.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnaEkran.resx">
+      <DependentUpon>AnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Uygulama\Gönder Al.resx">
+      <DependentUpon>Gönder Al.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uygulama\Örnek_Şablon.resx">
+      <DependentUpon>Örnek_Şablon.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Sınıflar\HazirKod\LICENSE" />
+    <None Include="Sınıflar\HazirKod\README.md" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ekle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meşgul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seçili.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Cihaz Yardımcısı.exe.config">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Cihaz Yardımcısı.exe.manifest">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>ManifestEntryPoint</FileType>
+    </PublishFile>
+    <PublishFile Include="Cihaz Yardımcısı.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yenile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\İzinKontrolu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\İzinAraMal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ikon.ico" />
+    <Content Include="Resources\Cihaz_Ağ_Kırmızı.png" />
+    <None Include="Resources\Cihaz_Ağ_Mavi.png" />
+    <Content Include="Resources\Cihaz_Ağ_Yeşil.png" />
+    <Content Include="Resources\Cihaz_SeriPort_Kırmızı.png" />
+    <None Include="Resources\Cihaz_SeriPort_Mavi.png" />
+    <Content Include="Resources\Cihaz_SeriPort_Yeşil.png" />
+    <Content Include="Resources\Cihaz_UygulamalarArasıHaberleşme_Kırmızı.png" />
+    <Content Include="Resources\Cihaz_UygulamalarArasıHaberleşme_Yeşil.png" />
+    <Content Include="Resources\Cihaz_Uygulama_Kırmızı.png" />
+    <None Include="Resources\Cihaz_Uygulama_Mavi.png" />
+    <Content Include="Resources\Cihaz_Uygulama_Yeşil.png" />
+    <None Include="Resources\Durgun.png" />
+    <None Include="Resources\Bulunanlar.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
