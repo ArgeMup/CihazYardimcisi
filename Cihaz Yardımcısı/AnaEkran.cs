@@ -78,9 +78,9 @@ namespace Cihaz_Yardımcısı
                 Menü_Ağaç_uygulama.DropDownItems.Add(yeni_tsmi);
 
                 if (SonUygulam == yeni_tsmi.Name) AnaEkran_Uygulama_Seçildi(yeni_tsmi, null);
-}
+            }
 
-            YeniYazılımKontrolü.Başlat(new Uri("https://github.com/ArgeMup/CihazYardimcisi/blob/main/CihazYardimcisi/bin/Release/CihazYardimcisi.exe?raw=true"));
+            YeniYazılımKontrolü.Başlat(new Uri("https://github.com/ArgeMup/CihazYardimcisi/blob/main/Cihaz%20Yard%C4%B1mc%C4%B1s%C4%B1/bin/Release/Cihaz%20Yard%C4%B1mc%C4%B1s%C4%B1.exe?raw=true"));
         }
         private void AnaEkran_FormClosed(object sender, FormClosedEventArgs e)
         {
