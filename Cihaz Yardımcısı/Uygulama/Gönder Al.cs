@@ -91,7 +91,7 @@ namespace Cihaz_Yardımcısı.Uygulama
                 Şablon.Girdili = Menü1_Girdili.Checked;
                 try { File.WriteAllText(Şablon.Klasörü + Şablon.SeçiliOlanınAdı, Girdi.Text); } catch (Exception) { }
 
-                Ayarlar.Yaz("Şablon " + Şablon.CihazVeyaUygulamanınAdı, D_HexMetin.BaytDizisinden(D_Nesne.BaytDizisine(Şablon)));
+                Ayarlar.Yaz("Şablon " + Şablon.CihazVeyaUygulamanınAdı, D_HexYazı.BaytDizisinden(D_Nesne.BaytDizisine(Şablon)));
             }
 
             string okunan = Ayarlar.Oku("Şablon " + Gelen);
@@ -100,7 +100,7 @@ namespace Cihaz_Yardımcısı.Uygulama
             {
                 try
                 {
-                    Şablon = D_Nesne.BaytDizisinden(D_HexMetin.BaytDizisine(okunan)) as Şablon_;
+                    Şablon = D_Nesne.BaytDizisinden(D_HexYazı.BaytDizisine(okunan)) as Şablon_;
                 }
                 catch (Exception) { }
             }

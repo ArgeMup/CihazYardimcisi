@@ -39,7 +39,7 @@ namespace Cihaz_Yardımcısı
             {
                 try
                 {
-                    Ayarlar_Bağlantılar = D_Nesne.BaytDizisinden(D_HexMetin.BaytDizisine(okunan)) as Dictionary<string, _Ayar_Bağlantı_>;
+                    Ayarlar_Bağlantılar = D_Nesne.BaytDizisinden(D_HexYazı.BaytDizisine(okunan)) as Dictionary<string, _Ayar_Bağlantı_>;
                 }
                 catch (Exception) { }
             }
@@ -64,7 +64,7 @@ namespace Cihaz_Yardımcısı
             {
                 try
                 {
-                    Ayarlar_Cihazlar = D_Nesne.BaytDizisinden(D_HexMetin.BaytDizisine(okunan)) as Dictionary<string, _Ayar_Cihaz_>;
+                    Ayarlar_Cihazlar = D_Nesne.BaytDizisinden(D_HexYazı.BaytDizisine(okunan)) as Dictionary<string, _Ayar_Cihaz_>;
                 }
                 catch (Exception) { }
             }
@@ -263,11 +263,11 @@ namespace Cihaz_Yardımcısı
         public static void Kullanıcıİsteği_Kaydet()
         {
             //Bağlantılar
-            string okunan = D_HexMetin.BaytDizisinden(D_Nesne.BaytDizisine(Ayarlar_Bağlantılar));
+            string okunan = D_HexYazı.BaytDizisinden(D_Nesne.BaytDizisine(Ayarlar_Bağlantılar));
             O.Ayarlar.Yaz("Ayarlar_Bağlantılar", okunan);
 
             //Cihazlar
-            okunan = D_HexMetin.BaytDizisinden(D_Nesne.BaytDizisine(Ayarlar_Cihazlar));
+            okunan = D_HexYazı.BaytDizisinden(D_Nesne.BaytDizisine(Ayarlar_Cihazlar));
             O.Ayarlar.Yaz("Ayarlar_Cihazlar", okunan);
 
             O.Ayarlar.DeğişiklikleriKaydet();
@@ -292,13 +292,13 @@ namespace Cihaz_Yardımcısı
             {
                 case Cihaz_Tip.SeriPort:
                     Cihaz.SeriPort = new SeriPort_(dizi[0], Cihaz.Ayarı.SeriPort.BaudRate, GeriBildirim_Islemi_,
-                        Cihaz.Dalı, true, 1000, Cihaz.Ayarı.ZamanAşımı_Gönderme_msn);
+                        Cihaz.Dalı, true, 1000, Cihaz.Ayarı.ZamanAşımı_Gönderme_msn, Cihaz.Ayarı.SeriPort.DataBits, Cihaz.Ayarı.SeriPort.Parity, Cihaz.Ayarı.SeriPort.StopBits);
                     Cihaz.Aracı = Cihaz.SeriPort;
                     break;
 
                 case Cihaz_Tip.AğTcpSunucu:
                     Cihaz.TcpSunucu = new TcpSunucu_(Cihaz.Ayarı.AğSunucu.ErişimNoktası, GeriBildirim_Islemi_,
-                        Cihaz.Dalı, true, 1000, Cihaz.Ayarı.ZamanAşımı_Gönderme_msn);
+                        Cihaz.Dalı, true, 1000, Cihaz.Ayarı.ZamanAşımı_Gönderme_msn, false);
                     Cihaz.Aracı = Cihaz.TcpSunucu;
                     Görseller.Dal_Değiştir(Cihaz.Dalı, "", "", Görseller.Resim.Ağ_Yeşil);
                     break;
@@ -311,14 +311,14 @@ namespace Cihaz_Yardımcısı
 
                 case Cihaz_Tip.AğUdpDinleyiciGönderici:
                     Cihaz.UdpDinleyici = new UdpDinleyici_(Cihaz.Ayarı.AğSunucu.ErişimNoktası, GeriBildirim_Islemi_,
-                        Cihaz.Dalı, true, 1000, Cihaz.Ayarı.ZamanAşımı_Gönderme_msn);
+                        Cihaz.Dalı, true, 1000, Cihaz.Ayarı.ZamanAşımı_Gönderme_msn, false);
                     Cihaz.Aracı = Cihaz.UdpDinleyici;
                     Görseller.Dal_Değiştir(Cihaz.Dalı, "", "", Görseller.Resim.Ağ_Yeşil);
                     break;
 
                 case Cihaz_Tip.AğUdpGönderici:
                     Cihaz.UdpDinleyici = new UdpDinleyici_(-1, GeriBildirim_Islemi_,
-                        Cihaz.Dalı, true, 1000, Cihaz.Ayarı.ZamanAşımı_Gönderme_msn);
+                        Cihaz.Dalı, true, 1000, Cihaz.Ayarı.ZamanAşımı_Gönderme_msn, false);
                     Cihaz.Aracı = Cihaz.UdpDinleyici;
                     Görseller.Dal_Değiştir(Cihaz.Dalı, "", "", Görseller.Resim.Ağ_Yeşil);
                     break;

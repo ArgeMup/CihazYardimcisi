@@ -86,23 +86,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sınıflar\HazirKod\Ayarlar.cs" />
-    <Compile Include="Sınıflar\HazirKod\Degiskenler.cs" />
-    <Compile Include="Sınıflar\HazirKod\DonanımHaberleşmesi.cs" />
-    <Compile Include="Sınıflar\HazirKod\DonanımHaberleşmesi_KomutSatırıUygulaması.cs" />
-    <Compile Include="Sınıflar\HazirKod\DonanımHaberleşmesi_SeriPort.cs" />
-    <Compile Include="Sınıflar\HazirKod\DonanımHaberleşmesi_Tcp.cs" />
-    <Compile Include="Sınıflar\HazirKod\DonanımHaberleşmesi_Udp.cs" />
-    <Compile Include="Sınıflar\HazirKod\Donusturme.cs" />
-    <Compile Include="Sınıflar\HazirKod\DurumBildirimi.cs" />
-    <Compile Include="Sınıflar\HazirKod\Karmasiklastirma.cs" />
-    <Compile Include="Sınıflar\HazirKod\KayitDefteri.cs" />
-    <Compile Include="Sınıflar\HazirKod\Matematiksel.cs" />
-    <Compile Include="Sınıflar\HazirKod\PencereVeTepsiIkonuKontrolu.cs" />
-    <Compile Include="Sınıflar\HazirKod\UygulamalarArasiHaberlesme.cs" />
-    <Compile Include="Sınıflar\HazirKod\UygulamaOncedenCalistirildiMi.cs" />
-    <Compile Include="Sınıflar\HazirKod\Win32Kutuphaneleri.cs" />
-    <Compile Include="Sınıflar\HazirKod\YeniYazılımKontrolü.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\Ayarlar.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\Degiskenler.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\DonanımHaberleşmesi.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\DonanımHaberleşmesi_KomutSatırıUygulaması.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\DonanımHaberleşmesi_SeriPort.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\DonanımHaberleşmesi_Tcp.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\DonanımHaberleşmesi_Udp.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\Donusturme.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\DurumBildirimi.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\Karmasiklastirma.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\KayitDefteri.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\Matematiksel.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\PencereVeTepsiIkonuKontrolu.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\UygulamalarArasiHaberlesme.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\UygulamaOncedenCalistirildiMi.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\Win32Kutuphaneleri.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\Kendi.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\YeniYazılımKontrolü.cs" />
     <Compile Include="Sınıflar\İskelet\Bağlantılar.cs" />
     <Compile Include="Sınıflar\İskelet\Bağlantılar_Uygulama.cs" />
     <Compile Include="Sınıflar\İskelet\Bağlantılar_Tarama.cs" />
@@ -140,8 +141,8 @@
       <DependentUpon>Örnek_Şablon.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="Sınıflar\HazirKod\LICENSE" />
-    <None Include="Sınıflar\HazirKod\README.md" />
+    <None Include="Sınıflar\HazirKod_Cdiyez\LICENSE" />
+    <None Include="Sınıflar\HazirKod_Cdiyez\README.md" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

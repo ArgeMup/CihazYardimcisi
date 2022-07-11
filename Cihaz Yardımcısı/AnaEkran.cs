@@ -21,12 +21,13 @@ namespace Cihaz_Yardımcısı
         }
         private void AnaEkran_Load(object sender, EventArgs e)
         {
-            Text = "ArGeMuP " + Application.ProductName + " V" + Application.ProductVersion;
+            Text = "ArGeMuP " + Kendi.Adı() + " V" + Kendi.Sürümü_Dosya();
 
-            O.pak = Path.GetDirectoryName(Application.ExecutablePath) + "\\CihazYardımcısıDosyalari\\"; //programanaklasör
+            O.pak = Kendi.Klasörü() + "\\CihazYardımcısıDosyalari\\"; //programanaklasör
+
             Directory.CreateDirectory(O.pak + "Banka");
             O.Ayarlar = new Ayarlar_
-                (out _, "", O.pak + "Banka\\" + Path.GetFileName(Application.ExecutablePath) + ".Ayarlar");
+                (out _, "", O.pak + "Banka\\" + Kendi.Adı() + ".Ayarlar");
 
             O.UygulamaKontrolu = new PencereVeTepsiIkonuKontrolu_(this, O.Ayarlar);
             O.UygulamaKontrolu.TepsiİkonunuBaşlat(false);
@@ -299,7 +300,7 @@ namespace Cihaz_Yardımcısı
                 _Ayar_Cihaz_ ayar = (Ağaç.Tag as _Ayar_Cihaz_);
                 if (ayar.KullanıcıEkledi)
                 {
-                    DialogResult Dr = MessageBox.Show("Kaldırmak istediğinize emin misiniz?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                    DialogResult Dr = MessageBox.Show("Kaldırmak istediğinize emin misiniz?", Kendi.Adı(), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
                     if (Dr == DialogResult.No) return;
 
                     Cihazlar.Kullanıcıİsteği_Sil(ayar);
