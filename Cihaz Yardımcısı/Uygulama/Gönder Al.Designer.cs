@@ -49,9 +49,6 @@
             this.Menü1_Komutlar = new System.Windows.Forms.ToolStripMenuItem();
             this.Menü1_Komutlar_Bekle = new System.Windows.Forms.ToolStripMenuItem();
             this.Menü1_Komutlar_ÇıktıPunto = new System.Windows.Forms.ToolStripMenuItem();
-            this.Menü1_Şablonlar = new System.Windows.Forms.ToolStripMenuItem();
-            this.Menü1_Şablonlar_UygulamaGönderisi = new System.Windows.Forms.ToolStripMenuItem();
-            this.Menü1_Şablonlar_CevabıHexOlarakGöster = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.Menü1_Kes = new System.Windows.Forms.ToolStripMenuItem();
             this.Menü1_Kopyala = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,11 +84,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.ŞablonListesi.FormattingEnabled = true;
             this.ŞablonListesi.HorizontalScrollbar = true;
-            this.ŞablonListesi.ItemHeight = 16;
-            this.ŞablonListesi.Location = new System.Drawing.Point(3, 2);
-            this.ŞablonListesi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ŞablonListesi.Location = new System.Drawing.Point(2, 2);
+            this.ŞablonListesi.Margin = new System.Windows.Forms.Padding(2);
             this.ŞablonListesi.Name = "ŞablonListesi";
-            this.ŞablonListesi.Size = new System.Drawing.Size(103, 100);
+            this.ŞablonListesi.Size = new System.Drawing.Size(78, 82);
             this.ŞablonListesi.TabIndex = 0;
             this.ipucu.SetToolTip(this.ŞablonListesi, "Şablonların listesi");
             this.ŞablonListesi.SelectedIndexChanged += new System.EventHandler(this.ŞablonListesi_SelectedIndexChanged);
@@ -99,10 +95,10 @@
             // Sil
             // 
             this.Sil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Sil.Location = new System.Drawing.Point(57, 133);
-            this.Sil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Sil.Location = new System.Drawing.Point(43, 108);
+            this.Sil.Margin = new System.Windows.Forms.Padding(2);
             this.Sil.Name = "Sil";
-            this.Sil.Size = new System.Drawing.Size(48, 23);
+            this.Sil.Size = new System.Drawing.Size(36, 19);
             this.Sil.TabIndex = 3;
             this.Sil.Text = "Sil";
             this.ipucu.SetToolTip(this.Sil, "Listedeki seçili olan şablonu siler (Sadece kullanıcını eklediği şablonlar siline" +
@@ -113,20 +109,20 @@
             // ŞablonAdı
             // 
             this.ŞablonAdı.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ŞablonAdı.Location = new System.Drawing.Point(3, 105);
-            this.ŞablonAdı.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ŞablonAdı.Location = new System.Drawing.Point(2, 85);
+            this.ŞablonAdı.Margin = new System.Windows.Forms.Padding(2);
             this.ŞablonAdı.Name = "ŞablonAdı";
-            this.ŞablonAdı.Size = new System.Drawing.Size(103, 22);
+            this.ŞablonAdı.Size = new System.Drawing.Size(78, 20);
             this.ŞablonAdı.TabIndex = 1;
             this.ipucu.SetToolTip(this.ŞablonAdı, "Eklenecek yeni şablonun adı veya geçerli olanın adı");
             // 
             // Ekle
             // 
             this.Ekle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Ekle.Location = new System.Drawing.Point(3, 133);
-            this.Ekle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Ekle.Location = new System.Drawing.Point(2, 108);
+            this.Ekle.Margin = new System.Windows.Forms.Padding(2);
             this.Ekle.Name = "Ekle";
-            this.Ekle.Size = new System.Drawing.Size(48, 23);
+            this.Ekle.Size = new System.Drawing.Size(36, 19);
             this.Ekle.TabIndex = 2;
             this.Ekle.Text = "Ekle";
             this.ipucu.SetToolTip(this.Ekle, "Yeni şablonu kaydeder");
@@ -138,11 +134,11 @@
             this.Girdi.ContextMenuStrip = this.Menü1;
             this.Girdi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Girdi.Location = new System.Drawing.Point(0, 0);
-            this.Girdi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Girdi.Margin = new System.Windows.Forms.Padding(2);
             this.Girdi.Multiline = true;
             this.Girdi.Name = "Girdi";
             this.Girdi.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.Girdi.Size = new System.Drawing.Size(257, 30);
+            this.Girdi.Size = new System.Drawing.Size(193, 25);
             this.Girdi.TabIndex = 7;
             this.ipucu.SetToolTip(this.Girdi, "Girdi");
             // 
@@ -158,7 +154,6 @@
             this.Menü1_Başlıklı,
             this.Menü1_Sabitler,
             this.Menü1_Komutlar,
-            this.Menü1_Şablonlar,
             this.toolStripSeparator2,
             this.Menü1_Kes,
             this.Menü1_Kopyala,
@@ -168,14 +163,14 @@
             this.Menü1.Name = "Menü_Girdi";
             this.Menü1.ShowCheckMargin = true;
             this.Menü1.ShowImageMargin = false;
-            this.Menü1.Size = new System.Drawing.Size(189, 354);
+            this.Menü1.Size = new System.Drawing.Size(181, 302);
             this.Menü1.Opening += new System.ComponentModel.CancelEventHandler(this.Menü1_Opening);
             // 
             // Menü1_MetniKaydır
             // 
             this.Menü1_MetniKaydır.CheckOnClick = true;
             this.Menü1_MetniKaydır.Name = "Menü1_MetniKaydır";
-            this.Menü1_MetniKaydır.Size = new System.Drawing.Size(188, 26);
+            this.Menü1_MetniKaydır.Size = new System.Drawing.Size(180, 22);
             this.Menü1_MetniKaydır.Text = "Metni kaydır";
             this.Menü1_MetniKaydır.ToolTipText = "Uzun satırların alt satırdan devam etmesini sağlar.";
             this.Menü1_MetniKaydır.Click += new System.EventHandler(this.Menü1_MetniKaydır_Click);
@@ -184,7 +179,7 @@
             // 
             this.Menü1_ÇıktıyıTemizle.CheckOnClick = true;
             this.Menü1_ÇıktıyıTemizle.Name = "Menü1_ÇıktıyıTemizle";
-            this.Menü1_ÇıktıyıTemizle.Size = new System.Drawing.Size(188, 26);
+            this.Menü1_ÇıktıyıTemizle.Size = new System.Drawing.Size(180, 22);
             this.Menü1_ÇıktıyıTemizle.Text = "Çıktıyı temizle";
             this.Menü1_ÇıktıyıTemizle.ToolTipText = "Her yeni döngüde çıktıyı temizler.";
             // 
@@ -192,20 +187,22 @@
             // 
             this.Menü1_SürekliDevamEt.CheckOnClick = true;
             this.Menü1_SürekliDevamEt.Name = "Menü1_SürekliDevamEt";
-            this.Menü1_SürekliDevamEt.Size = new System.Drawing.Size(188, 26);
+            this.Menü1_SürekliDevamEt.Size = new System.Drawing.Size(180, 22);
             this.Menü1_SürekliDevamEt.Text = "Sürekli devam et";
             this.Menü1_SürekliDevamEt.ToolTipText = "Girdiyi sonsuz tekrarlar.";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(185, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // Menü1_Girdili
             // 
+            this.Menü1_Girdili.Checked = true;
             this.Menü1_Girdili.CheckOnClick = true;
+            this.Menü1_Girdili.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Menü1_Girdili.Name = "Menü1_Girdili";
-            this.Menü1_Girdili.Size = new System.Drawing.Size(188, 26);
+            this.Menü1_Girdili.Size = new System.Drawing.Size(180, 22);
             this.Menü1_Girdili.Text = "Girdili";
             this.Menü1_Girdili.ToolTipText = "Hem komut hem cevap ikiside çıktıya yazdırılır.";
             // 
@@ -215,7 +212,7 @@
             this.Menü1_Başlıklı.CheckOnClick = true;
             this.Menü1_Başlıklı.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Menü1_Başlıklı.Name = "Menü1_Başlıklı";
-            this.Menü1_Başlıklı.Size = new System.Drawing.Size(188, 26);
+            this.Menü1_Başlıklı.Size = new System.Drawing.Size(180, 22);
             this.Menü1_Başlıklı.Text = "Başlıklı";
             this.Menü1_Başlıklı.ToolTipText = "Başlık (TS12 1) eklenir.  ";
             this.Menü1_Başlıklı.Click += new System.EventHandler(this.Menü1_Başlıklı_Click);
@@ -228,13 +225,13 @@
             this.Menü1_Sabitler_İkiKomutArasındaBekleme,
             this.Menü1_Sabitler_KomutCevapZamanAşımı});
             this.Menü1_Sabitler.Name = "Menü1_Sabitler";
-            this.Menü1_Sabitler.Size = new System.Drawing.Size(188, 26);
+            this.Menü1_Sabitler.Size = new System.Drawing.Size(180, 22);
             this.Menü1_Sabitler.Text = "Sabitler";
             // 
             // Menü1_Sabitler_Girdili
             // 
             this.Menü1_Sabitler_Girdili.Name = "Menü1_Sabitler_Girdili";
-            this.Menü1_Sabitler_Girdili.Size = new System.Drawing.Size(278, 26);
+            this.Menü1_Sabitler_Girdili.Size = new System.Drawing.Size(222, 22);
             this.Menü1_Sabitler_Girdili.Text = "Girdili";
             this.Menü1_Sabitler_Girdili.ToolTipText = "Komut satırından kontol.";
             this.Menü1_Sabitler_Girdili.Click += new System.EventHandler(this.Menü1_Sabitler_Girdili_Click);
@@ -242,7 +239,7 @@
             // Menü1_Sabitler_Başlıklı
             // 
             this.Menü1_Sabitler_Başlıklı.Name = "Menü1_Sabitler_Başlıklı";
-            this.Menü1_Sabitler_Başlıklı.Size = new System.Drawing.Size(278, 26);
+            this.Menü1_Sabitler_Başlıklı.Size = new System.Drawing.Size(222, 22);
             this.Menü1_Sabitler_Başlıklı.Text = "Başlıklı";
             this.Menü1_Sabitler_Başlıklı.ToolTipText = "Komut satırından kontol.";
             this.Menü1_Sabitler_Başlıklı.Click += new System.EventHandler(this.Menü1_Sabitler_Başlıklı_Click);
@@ -250,7 +247,7 @@
             // Menü1_Sabitler_İkiKomutArasındaBekleme
             // 
             this.Menü1_Sabitler_İkiKomutArasındaBekleme.Name = "Menü1_Sabitler_İkiKomutArasındaBekleme";
-            this.Menü1_Sabitler_İkiKomutArasındaBekleme.Size = new System.Drawing.Size(278, 26);
+            this.Menü1_Sabitler_İkiKomutArasındaBekleme.Size = new System.Drawing.Size(222, 22);
             this.Menü1_Sabitler_İkiKomutArasındaBekleme.Text = "İki komut arasında bekleme";
             this.Menü1_Sabitler_İkiKomutArasındaBekleme.ToolTipText = "Komut satırından kontol.";
             this.Menü1_Sabitler_İkiKomutArasındaBekleme.Click += new System.EventHandler(this.Menü1_Sabitler_İkiKomutArasındaBekleme_Click);
@@ -258,7 +255,7 @@
             // Menü1_Sabitler_KomutCevapZamanAşımı
             // 
             this.Menü1_Sabitler_KomutCevapZamanAşımı.Name = "Menü1_Sabitler_KomutCevapZamanAşımı";
-            this.Menü1_Sabitler_KomutCevapZamanAşımı.Size = new System.Drawing.Size(278, 26);
+            this.Menü1_Sabitler_KomutCevapZamanAşımı.Size = new System.Drawing.Size(222, 22);
             this.Menü1_Sabitler_KomutCevapZamanAşımı.Text = "Komuta cevap zaman aşımı ";
             this.Menü1_Sabitler_KomutCevapZamanAşımı.ToolTipText = "Komut satırından kontol.";
             this.Menü1_Sabitler_KomutCevapZamanAşımı.Click += new System.EventHandler(this.Menü1_Sabitler_KomutCevapZamanAşımı_Click);
@@ -269,13 +266,13 @@
             this.Menü1_Komutlar_Bekle,
             this.Menü1_Komutlar_ÇıktıPunto});
             this.Menü1_Komutlar.Name = "Menü1_Komutlar";
-            this.Menü1_Komutlar.Size = new System.Drawing.Size(188, 26);
+            this.Menü1_Komutlar.Size = new System.Drawing.Size(180, 22);
             this.Menü1_Komutlar.Text = "Komutlar";
             // 
             // Menü1_Komutlar_Bekle
             // 
             this.Menü1_Komutlar_Bekle.Name = "Menü1_Komutlar_Bekle";
-            this.Menü1_Komutlar_Bekle.Size = new System.Drawing.Size(164, 26);
+            this.Menü1_Komutlar_Bekle.Size = new System.Drawing.Size(133, 22);
             this.Menü1_Komutlar_Bekle.Text = "Bekle";
             this.Menü1_Komutlar_Bekle.ToolTipText = "İki komut arası fazladan bekleme.";
             this.Menü1_Komutlar_Bekle.Click += new System.EventHandler(this.Menü1_Komutlar_Bekle_Click);
@@ -283,72 +280,48 @@
             // Menü1_Komutlar_ÇıktıPunto
             // 
             this.Menü1_Komutlar_ÇıktıPunto.Name = "Menü1_Komutlar_ÇıktıPunto";
-            this.Menü1_Komutlar_ÇıktıPunto.Size = new System.Drawing.Size(164, 26);
+            this.Menü1_Komutlar_ÇıktıPunto.Size = new System.Drawing.Size(133, 22);
             this.Menü1_Komutlar_ÇıktıPunto.Text = "Çıktı punto";
             this.Menü1_Komutlar_ÇıktıPunto.ToolTipText = "Çıktı karakter büyüklüğü.";
             this.Menü1_Komutlar_ÇıktıPunto.Click += new System.EventHandler(this.Menü1_Komutlar_ÇıktıPunto_Click);
             // 
-            // Menü1_Şablonlar
-            // 
-            this.Menü1_Şablonlar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Menü1_Şablonlar_UygulamaGönderisi,
-            this.Menü1_Şablonlar_CevabıHexOlarakGöster});
-            this.Menü1_Şablonlar.Name = "Menü1_Şablonlar";
-            this.Menü1_Şablonlar.Size = new System.Drawing.Size(188, 26);
-            this.Menü1_Şablonlar.Text = "Şablonlar";
-            this.Menü1_Şablonlar.Visible = false;
-            // 
-            // Menü1_Şablonlar_UygulamaGönderisi
-            // 
-            this.Menü1_Şablonlar_UygulamaGönderisi.Name = "Menü1_Şablonlar_UygulamaGönderisi";
-            this.Menü1_Şablonlar_UygulamaGönderisi.Size = new System.Drawing.Size(255, 26);
-            this.Menü1_Şablonlar_UygulamaGönderisi.Text = "Uygulama gönderisi";
-            this.Menü1_Şablonlar_UygulamaGönderisi.Click += new System.EventHandler(this.Menü1_Şablonlar_UygulamaGönderisi_Click);
-            // 
-            // Menü1_Şablonlar_CevabıHexOlarakGöster
-            // 
-            this.Menü1_Şablonlar_CevabıHexOlarakGöster.Name = "Menü1_Şablonlar_CevabıHexOlarakGöster";
-            this.Menü1_Şablonlar_CevabıHexOlarakGöster.Size = new System.Drawing.Size(255, 26);
-            this.Menü1_Şablonlar_CevabıHexOlarakGöster.Text = "Cevabı hex olarak göster";
-            this.Menü1_Şablonlar_CevabıHexOlarakGöster.Click += new System.EventHandler(this.Menü1_Şablonlar_CevabıHexOlarakGöster_Click);
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(185, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // Menü1_Kes
             // 
             this.Menü1_Kes.Name = "Menü1_Kes";
-            this.Menü1_Kes.Size = new System.Drawing.Size(188, 26);
+            this.Menü1_Kes.Size = new System.Drawing.Size(180, 22);
             this.Menü1_Kes.Text = "Kes";
             this.Menü1_Kes.Click += new System.EventHandler(this.Menü1_Kes_Click);
             // 
             // Menü1_Kopyala
             // 
             this.Menü1_Kopyala.Name = "Menü1_Kopyala";
-            this.Menü1_Kopyala.Size = new System.Drawing.Size(188, 26);
+            this.Menü1_Kopyala.Size = new System.Drawing.Size(180, 22);
             this.Menü1_Kopyala.Text = "Kopyala";
             this.Menü1_Kopyala.Click += new System.EventHandler(this.Menü1_Kopyala_Click);
             // 
             // Menü1_Yapıştır
             // 
             this.Menü1_Yapıştır.Name = "Menü1_Yapıştır";
-            this.Menü1_Yapıştır.Size = new System.Drawing.Size(188, 26);
+            this.Menü1_Yapıştır.Size = new System.Drawing.Size(180, 22);
             this.Menü1_Yapıştır.Text = "Yapıştır";
             this.Menü1_Yapıştır.Click += new System.EventHandler(this.Menü1_Yapıştır_Click);
             // 
             // Menü1_TümünüSeç
             // 
             this.Menü1_TümünüSeç.Name = "Menü1_TümünüSeç";
-            this.Menü1_TümünüSeç.Size = new System.Drawing.Size(188, 26);
+            this.Menü1_TümünüSeç.Size = new System.Drawing.Size(180, 22);
             this.Menü1_TümünüSeç.Text = "Tümünü seç";
             this.Menü1_TümünüSeç.Click += new System.EventHandler(this.Menü1_TümünüSeç_Click);
             // 
             // Menü1_Temizle
             // 
             this.Menü1_Temizle.Name = "Menü1_Temizle";
-            this.Menü1_Temizle.Size = new System.Drawing.Size(188, 26);
+            this.Menü1_Temizle.Size = new System.Drawing.Size(180, 22);
             this.Menü1_Temizle.Text = "Temizle";
             this.Menü1_Temizle.Click += new System.EventHandler(this.Menü1_Temizle_Click);
             // 
@@ -357,9 +330,9 @@
             this.Çıktı.ContextMenuStrip = this.Menü1;
             this.Çıktı.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Çıktı.Location = new System.Drawing.Point(0, 0);
-            this.Çıktı.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Çıktı.Margin = new System.Windows.Forms.Padding(2);
             this.Çıktı.Name = "Çıktı";
-            this.Çıktı.Size = new System.Drawing.Size(257, 96);
+            this.Çıktı.Size = new System.Drawing.Size(193, 77);
             this.Çıktı.TabIndex = 8;
             this.Çıktı.Text = "";
             this.ipucu.SetToolTip(this.Çıktı, "Çıktı");
@@ -369,8 +342,8 @@
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(109, 28);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.splitContainer1.Location = new System.Drawing.Point(82, 23);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -381,8 +354,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(257, 128);
-            this.splitContainer1.SplitterDistance = 30;
+            this.splitContainer1.Size = new System.Drawing.Size(193, 104);
+            this.splitContainer1.SplitterDistance = 25;
             this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 8;
             // 
@@ -390,6 +363,7 @@
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -401,8 +375,9 @@
             this.splitContainer2.Panel2.Controls.Add(this.Çıktı2Filtre);
             this.splitContainer2.Panel2.Controls.Add(this.Çıktı2);
             this.splitContainer2.Panel2Collapsed = true;
-            this.splitContainer2.Size = new System.Drawing.Size(257, 96);
+            this.splitContainer2.Size = new System.Drawing.Size(193, 77);
             this.splitContainer2.SplitterDistance = 126;
+            this.splitContainer2.SplitterWidth = 3;
             this.splitContainer2.TabIndex = 9;
             // 
             // Çıktı2Filtre
@@ -411,8 +386,9 @@
             this.Çıktı2Filtre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Çıktı2Filtre.FormattingEnabled = true;
             this.Çıktı2Filtre.Location = new System.Drawing.Point(0, 0);
+            this.Çıktı2Filtre.Margin = new System.Windows.Forms.Padding(2);
             this.Çıktı2Filtre.Name = "Çıktı2Filtre";
-            this.Çıktı2Filtre.Size = new System.Drawing.Size(96, 24);
+            this.Çıktı2Filtre.Size = new System.Drawing.Size(96, 21);
             this.Çıktı2Filtre.Sorted = true;
             this.Çıktı2Filtre.TabIndex = 10;
             this.ipucu.SetToolTip(this.Çıktı2Filtre, "Gruplanmış hata ayıklama mesajları");
@@ -427,7 +403,7 @@
             this.Çıktı2.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Çıktı2.ForeColor = System.Drawing.Color.White;
             this.Çıktı2.Location = new System.Drawing.Point(0, 0);
-            this.Çıktı2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Çıktı2.Margin = new System.Windows.Forms.Padding(2);
             this.Çıktı2.Name = "Çıktı2";
             this.Çıktı2.Size = new System.Drawing.Size(96, 100);
             this.Çıktı2.TabIndex = 9;
@@ -436,15 +412,15 @@
             // 
             // Bekleme_İkiKomutArası
             // 
-            this.Bekleme_İkiKomutArası.Location = new System.Drawing.Point(109, 2);
-            this.Bekleme_İkiKomutArası.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Bekleme_İkiKomutArası.Location = new System.Drawing.Point(82, 2);
+            this.Bekleme_İkiKomutArası.Margin = new System.Windows.Forms.Padding(2);
             this.Bekleme_İkiKomutArası.Maximum = new decimal(new int[] {
             999999,
             0,
             0,
             0});
             this.Bekleme_İkiKomutArası.Name = "Bekleme_İkiKomutArası";
-            this.Bekleme_İkiKomutArası.Size = new System.Drawing.Size(85, 22);
+            this.Bekleme_İkiKomutArası.Size = new System.Drawing.Size(64, 20);
             this.Bekleme_İkiKomutArası.TabIndex = 4;
             this.ipucu.SetToolTip(this.Bekleme_İkiKomutArası, "İki komut arasındaki bekleme msn");
             this.Bekleme_İkiKomutArası.Value = new decimal(new int[] {
@@ -455,8 +431,8 @@
             // 
             // Bekleme_KomutaCevap
             // 
-            this.Bekleme_KomutaCevap.Location = new System.Drawing.Point(200, 2);
-            this.Bekleme_KomutaCevap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Bekleme_KomutaCevap.Location = new System.Drawing.Point(150, 2);
+            this.Bekleme_KomutaCevap.Margin = new System.Windows.Forms.Padding(2);
             this.Bekleme_KomutaCevap.Maximum = new decimal(new int[] {
             60000,
             0,
@@ -468,7 +444,7 @@
             0,
             0});
             this.Bekleme_KomutaCevap.Name = "Bekleme_KomutaCevap";
-            this.Bekleme_KomutaCevap.Size = new System.Drawing.Size(85, 22);
+            this.Bekleme_KomutaCevap.Size = new System.Drawing.Size(64, 20);
             this.Bekleme_KomutaCevap.TabIndex = 5;
             this.ipucu.SetToolTip(this.Bekleme_KomutaCevap, "Komuta cevap zaman aşımı msn");
             this.Bekleme_KomutaCevap.Value = new decimal(new int[] {
@@ -486,10 +462,10 @@
             this.Gönder.FlatAppearance.CheckedBackColor = System.Drawing.Color.DeepSkyBlue;
             this.Gönder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Gönder.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Gönder.Location = new System.Drawing.Point(291, 2);
-            this.Gönder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Gönder.Location = new System.Drawing.Point(218, 2);
+            this.Gönder.Margin = new System.Windows.Forms.Padding(2);
             this.Gönder.Name = "Gönder";
-            this.Gönder.Size = new System.Drawing.Size(73, 22);
+            this.Gönder.Size = new System.Drawing.Size(55, 18);
             this.Gönder.TabIndex = 9;
             this.Gönder.Text = "Gönder";
             this.Gönder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -504,7 +480,7 @@
             // 
             // Gönder_Al
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Gönder);
             this.Controls.Add(this.ŞablonAdı);
@@ -515,9 +491,9 @@
             this.Controls.Add(this.Sil);
             this.Controls.Add(this.ŞablonListesi);
             this.Enabled = false;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Gönder_Al";
-            this.Size = new System.Drawing.Size(369, 162);
+            this.Size = new System.Drawing.Size(277, 132);
             this.Load += new System.EventHandler(this.Gönder_Al_Load);
             this.Menü1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -571,9 +547,6 @@
         private System.Windows.Forms.ToolStripMenuItem Menü1_TümünüSeç;
         private System.Windows.Forms.ToolStripMenuItem Menü1_Temizle;
         private System.Windows.Forms.Timer Dinleme;
-        private System.Windows.Forms.ToolStripMenuItem Menü1_Şablonlar;
-        private System.Windows.Forms.ToolStripMenuItem Menü1_Şablonlar_UygulamaGönderisi;
-        private System.Windows.Forms.ToolStripMenuItem Menü1_Şablonlar_CevabıHexOlarakGöster;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.RichTextBox Çıktı2;
         private System.Windows.Forms.ComboBox Çıktı2Filtre;

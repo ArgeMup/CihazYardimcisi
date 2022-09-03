@@ -81,7 +81,9 @@ namespace Cihaz_Yardımcısı
                 if (SonUygulam == yeni_tsmi.Name) AnaEkran_Uygulama_Seçildi(yeni_tsmi, null);
             }
 
+            #if !DEBUG
             YeniYazılımKontrolü.Başlat(new Uri("https://github.com/ArgeMup/CihazYardimcisi/blob/main/Cihaz%20Yard%C4%B1mc%C4%B1s%C4%B1/bin/Release/Cihaz%20Yard%C4%B1mc%C4%B1s%C4%B1.exe?raw=true"));
+            #endif
         }
         private void AnaEkran_FormClosed(object sender, FormClosedEventArgs e)
         {

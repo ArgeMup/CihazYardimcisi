@@ -53,7 +53,7 @@ namespace Cihaz_Yardımcısı.Uygulama
             public bool SürekliDevamEt = false;
             public bool ÇıktıyıTemizle = false;
             public bool MetniKaydır = false;
-            public bool Başlıklı = false;
+            public bool Başlıklı = true;
             public bool Girdili = true;
 
             [NonSerialized]
@@ -129,8 +129,6 @@ namespace Cihaz_Yardımcısı.Uygulama
         }
         void Çağırılacak_Islem_BilgiGeldi(string Gelen)
         {
-            Gelen = Gelen.TrimEnd('\r', '\n', '\0');
-
             if (Gelen.StartsWith(">>"))
             {
                 if (Gönderi.GönderimAnı > 0)
@@ -197,14 +195,6 @@ namespace Cihaz_Yardımcısı.Uygulama
         private void Menü1_Sabitler_Girdili_Click(object sender, EventArgs e)
         {
             Girdi.AppendText(">>>Sabitler;Girdili;E //Seçenekler E:Evet H:Hayır" + Environment.NewLine);
-        }
-        private void Menü1_Şablonlar_UygulamaGönderisi_Click(object sender, EventArgs e)
-        {
-            Girdi.AppendText(">>>Şablonlar;UyGö;.;Alıcı;Konu;Mesaj" + Environment.NewLine);
-        }
-        private void Menü1_Şablonlar_CevabıHexOlarakGöster_Click(object sender, EventArgs e)
-        {
-            Girdi.AppendText(">>>Şablonlar;CeHeOlGö;YANKI;7 //>>TAMAM\\r\\n için 9" + Environment.NewLine);
         }
         private void Menü1_Kes_Click(object sender, EventArgs e)
         {

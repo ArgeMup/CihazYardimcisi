@@ -2,13 +2,10 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
-using System.Net.Sockets;
 using ArgeMup.HazirKod.DonanımHaberleşmesi;
 
 namespace Cihaz_Yardımcısı
@@ -111,7 +108,7 @@ namespace Cihaz_Yardımcısı
 
                     aracı = null;
                     doha = new SeriPort_(ErişimNoktası, cihaz.SeriPort.BaudRate, GeriBildirim_Islemi_,
-                            null, true, 5000, cihaz.ZamanAşımı_Gönderme_msn, cihaz.SeriPort.DataBits, cihaz.SeriPort.Parity, cihaz.SeriPort.StopBits);
+                            null, true, 500, cihaz.ZamanAşımı_Gönderme_msn, cihaz.SeriPort.DataBits, cihaz.SeriPort.Parity, cihaz.SeriPort.StopBits);
                     if (doha == null)
                     {
                         Görseller.Dal_Değiştir(dal, ErişimNoktası + " - Oluşturulamadı", "", Görseller.Resim.Durgun);
@@ -121,7 +118,7 @@ namespace Cihaz_Yardımcısı
                     }
 
                     //bağlantının kurulmasını bekle
-                    int za = Environment.TickCount + 1500;
+                    int za = Environment.TickCount + 2500;
                     while (za > Environment.TickCount && aracı == null && Bağlantılar_Tarama.Çalışsın) Thread.Sleep(100);
                     if (aracı == null)
                     {
@@ -144,9 +141,9 @@ namespace Cihaz_Yardımcısı
                     }
 
                     //tarama
-                    int başla = 1, bitir = 6;
+                    int başla = 1, bitir = 3;
                     uyandı = false;
-                    while (başla < bitir)
+                    while (başla <= bitir)
                     {
                         komut = Bağlantılar_Tarama.KomutÜret(cihaz.Başlık, başla, "YANKI");
                         Görseller.Dal_Değiştir(dal, ErişimNoktası + " - " + komut);
@@ -154,7 +151,7 @@ namespace Cihaz_Yardımcısı
                         {
                             uyandı = true;
 
-                            Cihazlar.Ekle_Cihaz_Eleman(cihaz, ErişimNoktası);
+                            Cihazlar.Ekle_Cihaz_Eleman(cihaz, ErişimNoktası + " " + başla + " 1");
 
                             if (string.IsNullOrEmpty(cihaz.Başlık)) break;
                         }
@@ -162,7 +159,7 @@ namespace Cihaz_Yardımcısı
                         başla++;
                         if (başla == bitir && uyandı)
                         {
-                            bitir += 5;
+                            bitir += 3;
                             uyandı = false;
                         }
                     }
@@ -197,7 +194,7 @@ namespace Cihaz_Yardımcısı
             {
                 case GeriBildirim_Türü_.BilgiGeldi:
                     string gelen = İçerik as string;
-                    if (gelen.StartsWith(">>")) GelenCevap = gelen.Trim('>', '\r');
+                    if (gelen.StartsWith(">>")) GelenCevap = gelen.Trim('>');
                     break;
 
                 case GeriBildirim_Türü_.BağlantıKuruldu:
@@ -206,7 +203,7 @@ namespace Cihaz_Yardımcısı
 
                 case GeriBildirim_Türü_.BağlantıKoptu:
                     aracı = null;
-                    break;      
+                    break;
             }
         }
     }

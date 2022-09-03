@@ -72,8 +72,8 @@ namespace Cihaz_Yardımcısı
             {
                 Ayarlar_Cihazlar = new Dictionary<string, _Ayar_Cihaz_>();
 
-                Ekle_Cihaz(false, Cihaz_Tip.SeriPort, "CTC1  921600 8 None 1 1500 500 500");
-                Ekle_Cihaz(false, Cihaz_Tip.SeriPort, "CTC2 CTC2 115200 8 None 1 1500 500 500");
+                Ekle_Cihaz(false, Cihaz_Tip.SeriPort, "CTC1  921600 8 Yok 1 1500 500 500");
+                Ekle_Cihaz(false, Cihaz_Tip.SeriPort, "CTC2 CTC2 115200 8 Yok 1 1500 500 500");
             }
 
             Görseller.YenidenÇizdir();
@@ -226,7 +226,7 @@ namespace Cihaz_Yardımcısı
             {
                 if (Hedef is _Ayar_Bağlantı_)
                 {
-                    //sp  CTCx CTCx 921600 8 None One 1000 1500 500
+                    //sp  CTCx CTCx 921600 8 Yok 1 1000 1500 500
                     //ağs CTCx CTCx 9999 1000 1500 500
                     //aği CTCx CTCx 127.0.0.1 9999 5000 1000 1500 500
                     //ks  CTCx / CTCx / C:\\Uygulama.exe / -a 100 -b 500 / 1000 / 1500 / 500

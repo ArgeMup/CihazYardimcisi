@@ -36,7 +36,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;HazriKod_Cdiyez_Görsel</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;HazirKod_Cdiyez_Görsel</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>3</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
@@ -46,7 +46,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE;HazriKod_Cdiyez_Görsel</DefineConstants>
+    <DefineConstants>TRACE;HazirKod_Cdiyez_Görsel</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
@@ -94,11 +94,21 @@
     <Compile Include="Sınıflar\HazirKod_Cdiyez\DonanımHaberleşmesi_Tcp.cs" />
     <Compile Include="Sınıflar\HazirKod_Cdiyez\DonanımHaberleşmesi_Udp.cs" />
     <Compile Include="Sınıflar\HazirKod_Cdiyez\Donusturme.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\DoğrulamaKodu.cs" />
     <Compile Include="Sınıflar\HazirKod_Cdiyez\DurumBildirimi.cs" />
     <Compile Include="Sınıflar\HazirKod_Cdiyez\Karmasiklastirma.cs" />
     <Compile Include="Sınıflar\HazirKod_Cdiyez\KayitDefteri.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\KelimeTamamlayici.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\Günlük.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\KlasörDosya.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\KlavyeFareGozlemcisi.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\KodKümesi.cs" />
     <Compile Include="Sınıflar\HazirKod_Cdiyez\Matematiksel.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\MesajPanosu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Sınıflar\HazirKod_Cdiyez\PencereVeTepsiIkonuKontrolu.cs" />
+    <Compile Include="Sınıflar\HazirKod_Cdiyez\UygulamaBostaBekliyor.cs" />
     <Compile Include="Sınıflar\HazirKod_Cdiyez\UygulamalarArasiHaberlesme.cs" />
     <Compile Include="Sınıflar\HazirKod_Cdiyez\UygulamaOncedenCalistirildiMi.cs" />
     <Compile Include="Sınıflar\HazirKod_Cdiyez\Win32Kutuphaneleri.cs" />
@@ -141,6 +151,7 @@
       <DependentUpon>Örnek_Şablon.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="Sınıflar\HazirKod_Cdiyez\.git" />
     <None Include="Sınıflar\HazirKod_Cdiyez\LICENSE" />
     <None Include="Sınıflar\HazirKod_Cdiyez\README.md" />
     <None Include="Properties\app.manifest" />
