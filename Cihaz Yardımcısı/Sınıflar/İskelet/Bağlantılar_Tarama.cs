@@ -132,11 +132,11 @@ namespace Cihaz_Yardımcısı
                     //uyandırma
                     Görseller.Dal_Değiştir(dal, ErişimNoktası + " - Uyandırma ");
                     za = Environment.TickCount + cihaz.ZamanAşımı_Uyandırma_msn;
-                    string komut = Bağlantılar_Tarama.KomutÜret(cihaz.Başlık, 0, "YANKI");
+                    string komut = Bağlantılar_Tarama.KomutÜret(cihaz.Başlık, 0, "Yanki");
                     bool uyandı = false;
                     while (za > Environment.TickCount && !uyandı && Bağlantılar_Tarama.Çalışsın)
                     {
-                        if (Gönder_Al(komut, cihaz.ZamanAşımı_İlkTarama_Alma_msn) == "TAMAM") uyandı = true;
+                        if (Gönder_Al(komut, cihaz.ZamanAşımı_İlkTarama_Alma_msn) == "Tamam") uyandı = true;
                         Görseller.Dal_Değiştir(dal, dal.Text + ".");
                     }
 
@@ -145,9 +145,9 @@ namespace Cihaz_Yardımcısı
                     uyandı = false;
                     while (başla <= bitir)
                     {
-                        komut = Bağlantılar_Tarama.KomutÜret(cihaz.Başlık, başla, "YANKI");
+                        komut = Bağlantılar_Tarama.KomutÜret(cihaz.Başlık, başla, "Yanki");
                         Görseller.Dal_Değiştir(dal, ErişimNoktası + " - " + komut);
-                        if (Gönder_Al(komut, cihaz.ZamanAşımı_İlkTarama_Alma_msn) == "TAMAM")
+                        if (Gönder_Al(komut, cihaz.ZamanAşımı_İlkTarama_Alma_msn) == "Tamam")
                         {
                             uyandı = true;
 
